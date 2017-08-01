@@ -26,7 +26,8 @@ ESP-WROOM-02(ESP8266)を利用しています。LEDは3535サイズの[SK6812MIN
 ３Dプリンタで印刷することができます。  
 
 ### きら☆いか リモコン公開
-アンドロイド端末で利用できるWi-FiリモコンはGoogle Playから[ダウンロード](https://play.google.com/store/apps/details?id=jp.gr.java_conf.approid.kiraika_remo)することができます。  
+アンドロイド端末で利用できるWi-FiリモコンはGoogle Playから[ダウンロード](https://play.google.com/store/apps/details?id=jp.gr.java_conf.approid.kiraika_remo)することができます。  
+
 ![Image](https://raw.githubusercontent.com/carcon999/kirakira-ika/master/img/kiraika-icon.png)  
 
 
