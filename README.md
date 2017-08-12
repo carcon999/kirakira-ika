@@ -34,5 +34,6 @@ ESP-WROOM-02(ESP8266)を利用しています。LEDは3535サイズの[SK6812MIN
 
 ![Image](https://raw.githubusercontent.com/carcon999/kirakira-ika/master/img/kiraika-icon.png)  
 
-
-
+### リモコン用ソースコード  
+リモートコントロールは、 ** WebSocket**が利用できるため、ブラウザ経由で制御することができます。[remotecontrol](https://github.com/carcon999/kirakira-ika/tree/master/remotecontrol)フォルダに一式公開しております。動作確認は、Chromeでのみ確認しております。
+PCのWi-Fi接続先をきらきら☆いかのアクセスポイントにすることで、パソコンからコントロールすることができます。
