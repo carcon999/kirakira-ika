@@ -1,0 +1,43 @@
+
+.input-string {
+  margin-top: 4px;
+  font-size: 20px;
+  background-color:#000000;
+  color:#FFFFFF;
+  width: 200px;
+}
+
+.form-control{
+  font-size:20px;
+}
+
+#connect{
+  font-size:22px;
+  margin-top: 4px;
+  width: 100px;
+}
+
+#disconnect{
+  font-size:22px;
+  margin-top: 4px;
+  width: 100px;
+}
+
+#ipadder {
+  font-size:24px;
+  width: 260px;
+}
+
+#navinf {
+  color: #808080;
+}
+
+#message {
+  text-align: center;
+}
+
+#big_btn {
+  width: 200px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
