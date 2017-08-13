@@ -1,0 +1,36 @@
+﻿Use Library List
+
+*** Arduino core for ESP8266 WiFi chip
+
+https://github.com/esp8266/Arduino
+GNU Lesser General Public License version 2.1 or (at your option) any later version.
+
+*** ESP8266WebServer
+
+https://github.com/esp8266/Arduino/tree/master/libraries/ESP8266WebServer
+
+Copyright (c) 2014 Ivan Grokhotkov.
+GNU Lesser General Public License version 2.1 or (at your option) any later version.
+
+*** Software I2S library for esp8266
+
+Copyright (c) 2015 Hristo Gochkov.
+GNU Lesser General Public License version 2.1 or (at your option) any later version.
+
+*** Library for accelerometer_MMA7760
+
+Copyright (c) 2013 seeed technology inc.
+MIT License (MIT)
+
+*** ArduinoJson
+
+https://bblanchon.github.io/ArduinoJson/
+MIT License (MIT)
+
+*** WebSocket Server and Client for Arduino
+
+https://github.com/Links2004/arduinoWebSockets
+GNU Lesser General Public License version 2.1 or (at your option) any later version.
+
+
+
