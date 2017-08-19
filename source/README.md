@@ -3,8 +3,6 @@
 
 ### 注意事項
 
-現在資料整備中です。
-少しづつ更新しています。全て公開されるまでしばらくお待ちください。
 ライセンスは、[LICENSE.txt](https://raw.githubusercontent.com/carcon999/kirakira-ika/master/LICENSE.txt)をご確認ください。
 
 # 概要
@@ -175,7 +173,7 @@ BasicOTAを開き、ssidとpasswordの値をご自身のWi-Fi環境の値に変�
 
 2. 本体の電源を入れます。（LEDバーは点灯しません。）
 
-3. IDEで、きらきら☆いかのファームを開きます。（kiraminiフォルダ内のkiramini.inoを開きます。）
+3. IDEで、きらきら☆いかのファームを開きます。（[kiramini](https://raw.githubusercontent.com/carcon999/kirakira-ika/master/source/kiramini)フォルダ内のkiramini.inoを開きます。）
 
 4. シリアルポートをUSBの仮想シリアルポートに合わせます。（ネットワークじゃない方）
 
