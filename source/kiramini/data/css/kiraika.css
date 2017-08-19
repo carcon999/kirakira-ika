@@ -1,0 +1,48 @@
+@media ( min-width: 768px ) {
+  #banner {
+    min-height: 300px;
+    border-bottom: none;
+  }
+  .bs-docs-section {
+    margin-top: 8em;
+  }
+  .bs-component {
+    position: relative;
+  }
+  .nav-tabs {
+    margin-bottom: 15px;
+  }
+  .progress {
+    margin-bottom: 10px;
+  }
+  .upload {
+    margin-top: 10px;
+  }
+}
+
+.jumbotron {
+  background:url(../kiraika.png) center no-repeat;
+  background-size: contain;
+  height: 54px;
+}
+
+#head {
+  background:url(../kiraika.png) center no-repeat;
+  background-size: contain;
+  height: 108px;
+}
+
+.imagePreview {
+  width: 100%;
+  height: 64px;
+  background-position: left top;
+  background-size: contain;
+  background-repeat: no-repeat;
+  -webkit-box-shadow: 0 0 1px 1px rgba(0, 0, 0, .3);
+  display: inline-block;
+}
+
+.filelist {
+  width: 256px;
+  height: 256px;
+}

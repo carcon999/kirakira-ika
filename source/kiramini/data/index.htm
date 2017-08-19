@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>きらきら☆いか</title>
+
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/kiraika.css">
+
+  <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="./js/kira.js"></script>
+  <script type="text/javascript">
+    window.onload = onLoad;
+
+    // 初期化処理
+    function onLoad() {
+      update_display_system_setting();
+      update_list_display();
+    }
+
+
+  </script>
+</head>
+
+<body>
+
+  <!-- ヘッダー（ロゴ画像） -->
+  <header>
+  </header>
+
+  <div id="head" class="container">
+    <div class="row">
+    </div>
+  </div>
+
+  <!-- タイトル -->
+  <div class="container">
+    <div class="row">
+      <div class="container">
+        <h2>きらきら☆いか設定</h2>
+        <h4>システム設定としてパラメータの変更と表示画像の管理が行えます。</h4>
+        <h4>設定完了後は、ブラウザを閉じて本体の電源を一度OFFしてから再起動してください。初回は起動まで時間がかかる場合があります。</h4>
+      </div>
+    </div>
+  </div>
+
+  <!-- LED設定 -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="well bs-component">
+          <fieldset>
+            <legend>■システム設定</legend>
+            <div class="form-group">
+              <div class="col-lg-14">
+                <h4>本体のLED数</h4>
+                <select id="ledlength" name="ledlength" size="1">
+                  <option value="32">大（LED32個）</option>
+                  <option value="22">小（LED22個）</option>
+                </select>
+                <h6>※本体のLED数に必ず合わせてください。</h6>
+              </div>
+              <br>
+              <div class="col-lg-14">
+                <h4>LEDの明るさ</h4>
+                <select id="ledbright" name="ledbright" size="1">
+                  <option value="128">非常に明るい</option>
+                  <option value="96">とても明るい</option>
+                  <option value="64">明るい</option>
+                  <option value="32">普通</option>
+                  <option value="16">暗い</option>
+                </select>
+                <h6>※明るさは利用可能時間に影響します。</h6>
+              </div>
+              <br>
+              <div class="col-lg-14">
+                <h4>Wi-Fiリモコンの利用</h4>
+                <select id="wifiset" name="wifiset" size="1">
+                  <option value="1">ON</option>
+                  <option value="0">OFF</option>
+                </select>
+                <h6>※リモコン操作しない場合はOFFの方がWi-FiがOFFとなるので電池持ちが良くなります。</h6>
+              </div>
+              <br>
+              <div class="setting">
+                <button type="button" class="btn btn-primary" id="settingBtn" onclick="request_system_setting_change();">更新</button>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+    </div>
+
+    <!-- 画像ファイルアップロード画面 -->
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="well bs-component">
+          <fieldset>
+            <legend>■画像ファイルアップロード</legend>
+            <h4>画像(bmpファイル)を追加することができます。<br>画像の大きさ（height）はLED数と合わせる必要があります。</h4>
+            <div class="form-group">
+              <div class="col-lg-14">
+                <form id="uploadform" name="uploadform" method="post"  enctype="multipart/form-data">
+                  <div class="imagePreview"></div>
+                  <div class="input-group">
+                    <label class="input-group-btn">
+                      <span class="btn btn-primary">
+                        ファイル選択<input id="selectbmp" type="file" style="display:none">
+                      </span>
+                    </label>
+                    <input type="text" class="form-control" readonly="">
+                  </div>
+                  <div class="input-group">
+                    <dt id="fileName">Name:</dt>
+                    <dt id="fileSize">Size:</dt>
+                    <dt id="fileType">Type:</dt>
+                    <dt id="imgWidth">Width:</dt>
+                    <dt id="imgHeight">Height:</dt>
+                    <dt id="imgBitcount">Bitcount:</dt>
+                    <font color="red"><dt id="imgInfo"></dt></font>
+                  </div>
+                  <div class="upload">
+                    <button type="button" class="btn btn-primary" id="uploadBtn" onclick="upload_file();" disabled>アップロード</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+    </div>
+
+    <!-- 画像ファイルリスト表示画面-->
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="well bs-component">
+          <fieldset>
+            <legend>■画像ファイルリスト</legend>
+            <h4>画像(bmpファイル)を削除することができます。</h4>
+            <div class="form-group">
+              <div class="col-lg-14">
+                <select id="select" multiple="" class="form-control" onchange="activation_delete_button();" size="10">
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-lg-14">
+                <button type="button" id="deleteBtn" class="btn btn-primary" onclick="remove_files();" disabled >削除</button>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
