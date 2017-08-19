@@ -1,11 +1,6 @@
 きらきら☆いか
 ===================
 
-### 注意事項
-
-現在資料整備中です。
-少しづつ更新しています。全て公開されるまでしばらくお待ちください。
-
 ### 概要
 
 『きらきら☆いか』は、残像表示が得意なLEDバーになります。
@@ -23,6 +18,10 @@ https://youtu.be/-Ymk3oiKI8k
 ハードウェアの回路図を公開しました。
 ESP-WROOM-02(ESP8266)を利用しています。LEDは3535サイズの[SK6812MINI](https://cdn-shop.adafruit.com/product-files/2686/SK6812MINI_REV.01-1-2.pdf)を利用しています。表裏合わせると最大64個のLEDを搭載できる設計です。  
 [schematic](https://github.com/carcon999/kirakira-ika/tree/master/schematic)フォルダにPDFファイルを公開しています。 
+
+### ガーバー
+基板製造用のgerberを公開しました。
+[gerber](https://github.com/carcon999/kirakira-ika/tree/master/gerber)フォルダに一式公開しています。基板を３面付けしたデータを公開しています。表示するには、別途Gerber Viewerが必要です。
 
 ### プログラム（本体ソースコード）
 Arduino IDEでビルド可能な、本体プログラムを公開しています。
